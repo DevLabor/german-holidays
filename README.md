@@ -17,11 +17,13 @@ composer require devlabor/german-holidays
 ## Usage
 
 ``` php
-$holidays = DevLabor\GermanHolidays\Holidays::get();
-$holidays = DevLabor\GermanHolidays\Holidays::get(2021, DevLabor\GermanHolidays\Holidays::STATE_SAXONY_ANHALT);
+use DevLabor\GermanHolidays\Holidays;
 
-$federalKey =  DevLabor\GermanHolidays\Holidays::resolveFederalStateName('Sachsen-Anhalt'); // returns ST
-$holidays = DevLabor\GermanHolidays\Holidays::get(null, $federalKey);
+$holidays = Holidays::get();
+$holidays = Holidays::get(2021, Holidays::STATE_SAXONY_ANHALT);
+
+$federalKey = Holidays::resolveFederalStateName('Sachsen-Anhalt'); // returns ST
+$holidays = Holidays::get(null, $federalKey);
 ```
 
 ## Testing
