@@ -1,22 +1,25 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "devlabor/german-holidays",
+    "description": "A PHP package to get german holidays from feiertage-api.de",
     "keywords": [
-        "spatie",
-        ":package_name"
+        "devlabor",
+        "german",
+        "holidays"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/devlabor/german-holidays",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
-            "role": "Developer"
+            "name": "Jeffrey Reichardt",
+            "email": "reichardt@devlabor.com",
+            "homepage": "https://devlabor.com",
+            "role": "CEO"
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.3",
+        "ext-json": "^1.7",
+        "guzzlehttp/guzzle": "^6.5"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
@@ -25,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "DevLabor\\GermanHolidays\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "DevLabor\\GermanHolidays\\Tests\\": "tests"
         }
     },
     "scripts": {
