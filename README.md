@@ -42,11 +42,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please email freek@devlabor.be instead of using the issue tracker.
+If you discover any security related issues, please email reichardt@devlabor.com instead of using the issue tracker.
 
 ## Credits
 
-- [:author_name](https://github.com/Kiv4h)
+- [Kiv4h](https://github.com/Kiv4h)
 - [All Contributors](../../contributors)
 
 ## License
