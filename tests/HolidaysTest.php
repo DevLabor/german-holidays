@@ -48,4 +48,21 @@ class HolidaysTest extends TestCase
 
         $this->assertIsArray($holidays);
     }
+
+    /** @test */
+    public function it_resolves_federal_state_name_of_thuringia()
+    {
+        $federalStateName = Holidays::resolveFederalStateName('Thüringen');
+        $holidays = Holidays::get(null, $federalStateName);
+
+        $this->assertIsArray($holidays);
+    }
+
+    /** @test */
+    public function it_returns_empty()
+    {
+        $holidays = Holidays::get(null, 'Sachsen-Anhalt');
+
+        $this->assertEmpty($holidays);
+    }
 }

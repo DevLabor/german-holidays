@@ -28,7 +28,8 @@ class Holidays
      * Getting data from feiertage-api.de.
      *
      * @param null $year
-     * @param null $federalState
+     * @param string $federalState
+     * @throws RequestException
      *
      * @return array
      */
@@ -48,9 +49,7 @@ class Holidays
         ];
 
         if ($federalState) {
-            array_push($parameters, [
-                'nur_land' => $federalState,
-            ]);
+            $parameters['nur_land'] = $federalState;
         }
 
         try {
@@ -63,7 +62,7 @@ class Holidays
             ];
         }
 
-        return json_decode($response->getBody(), true);
+        return json_decode($response->getBody()->getContents(), true) ?? [];
     }
 
     /**
