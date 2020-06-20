@@ -29,9 +29,9 @@ class Holidays
      *
      * @param null $year
      * @param string $federalState
-     * @throws RequestException
      *
      * @return array
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public static function get($year = null, $federalState = ''): array
     {
@@ -67,6 +67,7 @@ class Holidays
 
     /**
      * Resolves federal state name to const.
+     * Returns empty string if couldn't resolve the state name.
      *
      * @param $federalState
      *
@@ -109,6 +110,6 @@ class Holidays
                 return static::STATE_THURINGIA;
         }
 
-        return $federalState;
+        return '';
     }
 }
