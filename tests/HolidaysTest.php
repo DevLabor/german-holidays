@@ -70,8 +70,8 @@ class HolidaysTest extends TestCase
     public function is_eastern_on_correct_days()
     {
         $holidays = Holidays::get();
-        $eastern  = date("Y-m-d", easter_date());
-        $date     = new \DateTime($eastern);
+        $eastern = date("Y-m-d", easter_date());
+        $date = new \DateTime($eastern);
         $date->modify('+1 day');
 
         $this->assertEquals($holidays['NATIONAL']['Ostermontag']['datum'], $date->format('Y-m-d'));
