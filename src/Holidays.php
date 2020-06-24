@@ -36,7 +36,7 @@ class Holidays
     public static function get($year = null, $federalState = ''): array
     {
         if (! $year) {
-            $year = date('y');
+            $year = date('Y');
         }
 
         $client = new Client([
